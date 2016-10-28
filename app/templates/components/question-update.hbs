@@ -1,0 +1,27 @@
+<h1>QUESTION UPDATE</h1>
+
+{{#if updateQuestionFormIsOpen}}
+  <button {{action 'closeUpdateQuestionForm'}}>Cancel New Question</button>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="content">Question</label>
+        {{input value=content id="content"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        {{input value=notes id="notes"}}
+      </div>
+
+      <button {{action 'updateQuestion1' question}}>Update</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'openUpdateQuestionForm'}}>Update This Question</button>
+{{/if}}
