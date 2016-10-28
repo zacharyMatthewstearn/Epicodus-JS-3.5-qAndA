@@ -15,10 +15,14 @@ export default Ember.Component.extend({
         author: this.get('author'),
         question: this.get('question')
       };
+      console.log("CONTENT:" + this.get('content'));
+      console.log("AUTHOR:" + this.get('author'));
+      console.log("QUESTION:" + this.get('question'));
+      console.log("1");
       this.set('addAnswerFormIsOpen', false);
       this.sendAction('saveAnswer2', params);
-      console.log(params.question);
-      console.log("1");
+      console.log("1.5");
+
     }
   }
 });
