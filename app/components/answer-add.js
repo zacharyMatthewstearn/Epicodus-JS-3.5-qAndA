@@ -17,6 +17,8 @@ export default Ember.Component.extend({
       };
       this.set('addAnswerFormIsOpen', false);
       this.sendAction('saveAnswer2', params);
+      console.log(params.question);
+      console.log("1");
     }
   }
 });

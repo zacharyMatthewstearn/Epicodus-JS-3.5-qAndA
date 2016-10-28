@@ -1,7 +1,13 @@
 {{question-details question=model updateQuestion4="updateQuestion5"}}
 
 <ul>
-  {{#each model as |answer|}}
-    {{answer-tile answer=answer}}
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer saveAnswer4="saveAnswer5"}}
   {{/each}}
 </ul>
+
+
+<hr>
+
+
+{{answer-tile answer=answer saveAnswer4="saveAnswer5"}}
