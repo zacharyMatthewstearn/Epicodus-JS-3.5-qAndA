@@ -1,4 +1,5 @@
-<h2>TEST</h2>
-
-
-<!-- {{outlet}} -->
+<ul>
+  {{#each model as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</ul>
