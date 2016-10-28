@@ -1,16 +1,14 @@
-# Q&A
+# _Q&A_
 
-#### Q&A Web App for Epicodus JS Week 3 Code Review, 10/28/2016
+#### By [**Zachary Matthewstearn**](https://github.com/zacharyMatthewstearn) , 10/21/2016
 
 #### By Zachary Matthewstearn
 
 ## Description
 
-Question and answer message board web app where a user submits a question and other users can respond with answers.
+Web app message board web app where a user may submit questions and other users may respond with answers. Written in JavaScript with EmberJS.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
+## Requirements:
 
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
@@ -18,24 +16,25 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
+## Setup
 
-* `git clone <https://github.com/zacharyMatthewstearn/Epicodus-JS-3.5-qAndA>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+1. Clone this repository to your desktop `$ git clone https://github.com/zacharyMatthewstearn/Epicodus-JS-3.5-qAndA`
+2. Run the following commands from the root directory of the cloned project:
+  * `$ npm install`
+  * `$ bower install`
+  * `$ ember s`
+  * View the app at [http://localhost:4200](http://localhost:4200).
 
-## Running / Development
+## Known Bugs
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+No known bugs at this time.
 
 ### License
 
-Copyright (c) 2016 Zachary Matthewstearn
+Copyright &copy; 2016 **Zachary Matthewstearn**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
