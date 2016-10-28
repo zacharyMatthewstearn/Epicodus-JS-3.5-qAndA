@@ -1,1 +1,7 @@
 {{question-details question=model updateQuestion4="updateQuestion5"}}
+
+<ul>
+  {{#each model as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>

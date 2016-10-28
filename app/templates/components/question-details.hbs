@@ -3,3 +3,12 @@
 <h4>{{question.notes}}</h4>
 
 {{question-update question=question updateQuestion2="updateQuestion3"}}
+
+
+
+
+<ul>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
