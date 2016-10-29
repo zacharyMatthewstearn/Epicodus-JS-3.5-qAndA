@@ -1,12 +1,12 @@
-<h2>{{question.content}}</h2>
-<h3>{{question.author}}</h3>
-<h4>{{question.notes}}</h4>
+<div class="question-full">
+  <h2>{{question.content}}</h2>
+  <h3><em>By: </em>{{question.author}}</h3>
+  <h4>Notes: {{question.notes}}</h4>
+</div>
 
 {{question-update question=question updateQuestion2="updateQuestion3"}}
 
 {{answer-add question=question saveAnswer2="saveAnswer3"}}
-
-
 
 <ul>
   {{#each question.answers as |answer|}}
