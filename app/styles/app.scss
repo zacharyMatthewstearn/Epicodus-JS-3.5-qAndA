@@ -47,6 +47,12 @@ button {
   border-radius: 20px;
   background-color: $tyrianpurple;
   color: $antiflashwhite;
+  &:hover {
+    box-shadow: 0 0 15px $snow;
+    background-color: $snow;
+    color: $tyrianpurple;
+    font-weight: bold;
+  }
 }
 
 a,
