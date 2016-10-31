@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         author: this.get('author'),
         notes: this.get('notes'),
-        answers: this.get('answers')
+        answers: []
       };
       this.set('addQuestionFormIsOpen', false);
       this.sendAction('saveQuestion2', params);
