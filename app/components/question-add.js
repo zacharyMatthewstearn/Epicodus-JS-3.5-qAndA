@@ -16,8 +16,13 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         answers: []
       };
-      this.set('addQuestionFormIsOpen', false);
-      this.sendAction('saveQuestion2', params);
+      if(params.content && params.author && params.notes) {
+        this.set('addQuestionFormIsOpen', false);
+        this.sendAction('saveQuestion2', params);
+      }
+      else {
+        alert("All fields are required for question submission");
+      }
     }
   }
 });

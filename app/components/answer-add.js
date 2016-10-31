@@ -15,8 +15,13 @@ export default Ember.Component.extend({
         author: this.get('author'),
         question: this.get('question')
       };
-      this.set('addAnswerFormIsOpen', false);
-      this.sendAction('saveAnswer2', params);
+      if(params.content && params.author) {
+        this.set('addAnswerFormIsOpen', false);
+        this.sendAction('saveAnswer2', params);
+      }
+      else {
+        alert("All fields are required for answer submission");
+      }
     }
   }
 });
