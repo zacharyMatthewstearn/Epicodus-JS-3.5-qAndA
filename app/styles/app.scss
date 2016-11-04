@@ -3,6 +3,9 @@ $shadowblue:      #7180AC;
 $columbiablue:    #C0D6DF;
 $antiflashwhite:  #EFF2EF;
 $snow:            #FFFCF9;
+$pos:             #C1E283;
+$neg:             #E25B51;
+
 
 body {
   background-color: $columbiablue;
@@ -98,4 +101,11 @@ a:hover {
   h2 {
     margin-top: 10px;
   }
+}
+
+.pos {
+  color: $pos;
+}
+.neg {
+  color: $neg;
 }
