@@ -1,5 +1,5 @@
 {{#if signupFormOpen}}
-  <span {{action 'closeSignupForm'}}>Cancel Signup</span>
+  <span class="clickable" {{action 'closeSignupForm'}}>Cancel Signup</span>
   <form>
     <label for="input-username-signup">Username:</label>
     {{input type='text' value=username id='input-username-signup'}}
@@ -10,5 +10,5 @@
     <button {{action 'signUp1'}}>Sign Up</button>
   </form>
 {{else}}
-  <span {{action 'openSignupForm'}}>Sign Up</span>
+  <span class="clickable" {{action 'openSignupForm'}}>Sign Up</span>
 {{/if}}

@@ -6,12 +6,14 @@ export default Ember.Component.extend({
   actions: {
     openSignupForm() {
       this.set('signupFormOpen', true);
+      this.sendAction('setSignupFormOpenness', true);
     },
     closeSignupForm() {
       this.set('signupFormOpen', false);
       this.set('username', '');
       this.set('password1', '');
       this.set('password2', '');
+      this.sendAction('setSignupFormOpenness', false);
     },
     signUp1() {
       var credentials = {

@@ -1,5 +1,5 @@
 {{#if loginFormOpen}}
-  <span {{action 'closeLoginForm'}}>Cancel Login</span>
+  <span class="clickable" {{action 'closeLoginForm'}}>Cancel Login</span>
   <form>
     <label for="input-username-login">Username:</label>
     {{input type='text' value=username id='input-username-login'}}
@@ -8,5 +8,5 @@
     <button {{action 'logIn1'}}>Login</button>
   </form>
 {{else}}
-  <span {{action 'openLoginForm'}}>Login</span>
+  <span class="clickable" {{action 'openLoginForm'}}>Login</span>
 {{/if}}
