@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  sortBy: ['votes:desc'],
+  sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
+
   actions: {
     updateQuestion3(question, params) {
       this.sendAction('updateQuestion4', question, params);

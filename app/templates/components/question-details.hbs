@@ -9,7 +9,7 @@
 {{answer-add question=question saveAnswer2="saveAnswer3"}}
 
 <ul>
-  {{#each question.answers as |answer|}}
+  {{#each sortedAnswers as |answer|}}
     {{answer-tile answer=answer upvote2="upvote3" downvote2="downvote3"}}
   {{/each}}
 </ul>

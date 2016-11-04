@@ -13,7 +13,8 @@ export default Ember.Component.extend({
       var params = {
         content: this.get('content'),
         author: this.get('author'),
-        question: this.get('question')
+        question: this.get('question'),
+        votes: 0
       };
       if(params.content && params.author) {
         this.set('addAnswerFormIsOpen', false);
