@@ -103,6 +103,7 @@ a:hover {
   border-radius: 30px;
   padding: 1rem 4rem;
   background-color: $snow;
+  margin-top: 50px;
   h2 {
     margin-top: 10px;
   }
@@ -122,4 +123,15 @@ a:hover {
     border-radius: 20px;
     color: $snow;
   }
+}
+.upvote,
+.downvote {
+  font-size: 3rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.votes {
+  text-align: center;
+  margin: 0;
 }

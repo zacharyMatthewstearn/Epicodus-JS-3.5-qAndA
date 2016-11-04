@@ -1,6 +1,6 @@
 {{#if user.currentUser}}
-  <h4><em>Welcome, {{user.currentUser.username}}!</em></h4>
   <span class="clickable pull-right" {{action 'logOut1'}}>Log Out</span>
+  <h4 class="pull-right"><em>Welcome, {{user.currentUser.username}}.</em></h4>
 {{else}}
   {{#unless signupFormOpen}}
     {{user-login logIn2="logIn3" setLoginFormOpenness="setLoginFormOpenness"}}

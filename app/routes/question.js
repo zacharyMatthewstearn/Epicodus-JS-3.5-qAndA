@@ -1,9 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  user: Ember.inject.service(),
+
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+  
   actions: {
     updateQuestion5(question, params) {
       Object.keys(params).forEach(function(key) {
@@ -28,6 +31,15 @@ export default Ember.Route.extend({
     downvote5(answer) {
       answer.set('votes', answer.get('votes') - 1);
       answer.save();
+    },
+    logIn5(credentials) {
+      this.get('user').logIn(credentials.username, credentials.password);
+    },
+    signUp5(credentials) {
+      this.get('user').signUp(credentials.username, credentials.password);
+    },
+    logOut3() {
+      this.get('user').logOut();
     }
   }
 });
