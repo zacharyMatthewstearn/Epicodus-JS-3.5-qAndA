@@ -18,6 +18,10 @@ export default Ember.Component.extend({
       };
       this.set('updateQuestionFormIsOpen', false);
       this.sendAction('updateQuestion2', question, params);
+
+      this.set('content', '');
+      this.set('author', '');
+      this.set('notes', '');
     }
   }
 });

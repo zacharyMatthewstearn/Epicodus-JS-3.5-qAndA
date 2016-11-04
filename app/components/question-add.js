@@ -13,12 +13,15 @@ export default Ember.Component.extend({
       var params = {
         content: this.get('content'),
         author: this.get('author'),
-        notes: this.get('notes'),
-        answers: []
+        notes: this.get('notes')
       };
       if(params.content && params.author && params.notes) {
         this.set('addQuestionFormIsOpen', false);
         this.sendAction('saveQuestion2', params);
+
+        this.set('content', '');
+        this.set('author', '');
+        this.set('notes', '');
       }
       else {
         alert("All fields are required for question submission");
