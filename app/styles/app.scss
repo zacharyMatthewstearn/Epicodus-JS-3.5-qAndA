@@ -32,7 +32,7 @@ form {
   }
   .ember-text-field {
     vertical-align: top;
-    width: 80%;
+    width: 70%;
   }
   .form-group {
     margin-right: 10%;
@@ -46,7 +46,7 @@ button {
   display: block;
   margin: 20px auto;
   font-size: 2rem;
-  width: 50%;
+  width: 40%;
   border: 3px solid $antiflashwhite;
   border-radius: 20px;
   background-color: $tyrianpurple;
@@ -58,7 +58,10 @@ button {
     font-weight: bold;
   }
 }
-
+.inline-button-group button {
+  display: inline-block;
+  width: 20%;
+}
 a,
 a:link,
 a:visited,
@@ -76,6 +79,7 @@ a:hover {
   padding: 2rem 0;
   background-color: $tyrianpurple;
   border-bottom: 3px solid $antiflashwhite;
+  margin-bottom: 10px;
 }
 
 .tile {
@@ -111,5 +115,11 @@ a:hover {
   color: $neg;
 }
 .clickable {
-  
+  padding: 1rem;
+  font-weight: bold;
+  &:hover {
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    color: $snow;
+  }
 }

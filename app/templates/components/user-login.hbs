@@ -1,12 +1,18 @@
 {{#if loginFormOpen}}
-  <span class="clickable" {{action 'closeLoginForm'}}>Cancel Login</span>
   <form>
-    <label for="input-username-login">Username:</label>
-    {{input type='text' value=username id='input-username-login'}}
-    <label for="input-password-login">Password:</label>
-    {{input type='password' value=password id='input-password-login'}}
-    <button {{action 'logIn1'}}>Login</button>
+    <div class="form-group">
+      <label for="input-username-login">Username:</label>
+      {{input type='text' value=username id='input-username-login'}}
+    </div>
+    <div class="form-group">
+      <label for="input-password-login">Password:</label>
+      {{input type='password' value=password id='input-password-login'}}
+    </div>
+    <div class="inline-button-group">
+      <button {{action 'logIn1'}}>Login</button>
+      <button {{action 'closeLoginForm'}}>Cancel</button>
+    </div>
   </form>
 {{else}}
-  <span class="clickable" {{action 'openLoginForm'}}>Login</span>
+  <span class="clickable pull-right" {{action 'openLoginForm'}}>Login</span>
 {{/if}}
