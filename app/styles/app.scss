@@ -22,9 +22,10 @@ ul {
 form {
   border: 3px solid $tyrianpurple;
   border-radius: 30px;
-  padding: 1rem 4rem;
+  padding: 1rem 4rem 0;
   background-color: $antiflashwhite;
   text-align: right;
+  margin-bottom: 30px;
   label {
     font-size: 2rem;
     margin-bottom: 0;
