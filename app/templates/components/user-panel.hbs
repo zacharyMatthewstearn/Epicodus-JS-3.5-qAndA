@@ -1,0 +1,7 @@
+{{#if user.currentUser}}
+  <h4><em>Welcome, {{user.currentUser.username}}!</em></h4>
+  <button {{action 'logOut1'}}>Log Out</button>
+{{else}}
+  {{user-signup signUp2="signUp3"}}
+  {{user-login logIn2="logIn3"}}
+{{/if}}

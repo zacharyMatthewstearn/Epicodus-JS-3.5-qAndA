@@ -1,0 +1,12 @@
+{{#if loginFormOpen}}
+  <span {{action 'closeLoginForm'}}>Cancel Login</span>
+  <form>
+    <label for="input-username-login">Username:</label>
+    {{input type='text' value=username id='input-username-login'}}
+    <label for="input-password-login">Password:</label>
+    {{input type='password' value=password id='input-password-login'}}
+    <button {{action 'logIn1'}}>Login</button>
+  </form>
+{{else}}
+  <span {{action 'openLoginForm'}}>Login</span>
+{{/if}}
