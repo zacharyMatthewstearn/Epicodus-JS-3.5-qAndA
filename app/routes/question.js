@@ -20,6 +20,14 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
+    },
+    upvote5(answer) {
+      answer.set('votes', answer.get('votes') + 1);
+      answer.save();
+    },
+    downvote5(answer) {
+      answer.set('votes', answer.get('votes') - 1);
+      answer.save();
     }
   }
 });

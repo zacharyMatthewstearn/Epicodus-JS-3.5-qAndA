@@ -7,6 +7,12 @@ export default Ember.Component.extend({
     },
     saveAnswer3(params) {
       this.sendAction('saveAnswer4', params);
+    },
+    upvote3(answer) {
+      this.sendAction('upvote4', answer);
+    },
+    downvote3(answer) {
+      this.sendAction('downvote4', answer);
     }
   }
 });
