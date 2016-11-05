@@ -16,6 +16,17 @@ export default Ember.Route.extend({
       newQuestion.save();
     },
     logIn5(credentials) {
+      this.store.query('user', {
+        orderBy: 'username',
+        equalTo: credentials.username
+      }).then(function(results){
+        if(results.content.length) {
+          console.log("There is a user stored with username '" + credentials.username + "'");
+        }
+        else {
+          console.log("There is NO user stored with username '" + credentials.username + "'");
+        }
+      });
       this.get('user').logIn(credentials.username, credentials.password);
     },
     signUp5(credentials) {
