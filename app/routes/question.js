@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
-  
+
   actions: {
     updateQuestion5(question, params) {
       Object.keys(params).forEach(function(key) {
@@ -37,6 +37,8 @@ export default Ember.Route.extend({
     },
     signUp5(credentials) {
       this.get('user').signUp(credentials.username, credentials.password);
+      var newUser = this.store.createRecord('user', credentials);
+      newUser.save();
     },
     logOut3() {
       this.get('user').logOut();

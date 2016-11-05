@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       answers: this.store.findAll('answer')
     });
   },
-  
+
   actions: {
     saveQuestion3(params) {
       var newQuestion = this.store.createRecord('question', params);
@@ -20,6 +20,8 @@ export default Ember.Route.extend({
     },
     signUp5(credentials) {
       this.get('user').signUp(credentials.username, credentials.password);
+      var newUser = this.store.createRecord('user', credentials);
+      newUser.save();
     },
     logOut3() {
       this.get('user').logOut();
