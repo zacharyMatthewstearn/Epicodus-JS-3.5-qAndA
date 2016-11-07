@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   currentUser: null,
+  loginFormOpen: false,
+  signupFormOpen: false,
 
   signUp(_username, _password) {
     this.set('currentUser', {

@@ -21,13 +21,14 @@ export default Ember.Component.extend({
       };
       if(credentials.username && credentials.password) {
         this.sendAction('logIn2', credentials);
+        this.sendAction('setLoginFormOpenness', false);
         this.set('loginFormOpen', false);
-        this.set('username', '');
-        this.set('password', '');
       }
       else {
         alert('Both a username and password are required to log in.');
       }
+      this.set('username', '');
+      this.set('password', '');
     }
   }
 });

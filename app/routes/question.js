@@ -33,7 +33,18 @@ export default Ember.Route.extend({
       answer.save();
     },
     logIn5(credentials) {
-      this.get('user').logIn(credentials.username, credentials.password);
+      var userInScope = this.get('user');
+      this.store.query('user', {
+        orderBy: 'username',
+        equalTo: credentials.username
+      }).then(function(results){
+        if(results.content.length && results.content[0]._data.password === credentials.password) {
+          userInScope.logIn(credentials.username, credentials.password);
+        }
+        else {
+          alert("Either the username or password you entered was invalid.");
+        }
+      });
     },
     signUp5(credentials) {
       this.get('user').signUp(credentials.username, credentials.password);

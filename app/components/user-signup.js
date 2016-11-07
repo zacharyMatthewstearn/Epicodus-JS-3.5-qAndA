@@ -26,6 +26,7 @@ export default Ember.Component.extend({
         if(password1 === password2) {
           credentials.password = password1;
           this.sendAction('signUp2', credentials);
+          this.sendAction('setSignupFormOpenness', false);
           this.set('signupFormOpen', false);
           this.set('username', '');
         }

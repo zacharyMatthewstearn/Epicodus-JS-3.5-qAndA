@@ -16,22 +16,18 @@ export default Ember.Route.extend({
       newQuestion.save();
     },
     logIn5(credentials) {
+      var userInScope = this.get('user');
       this.store.query('user', {
         orderBy: 'username',
         equalTo: credentials.username
       }).then(function(results){
-        if(results.content.length) {
-          console.log(results.content[0]._data);
-          console.log("There is a user stored with username '" + credentials.username + "'");
-          console.log("their password is: " + results.content[0]._data.password);
-          console.log("the passowrd you entered is: " + credentials.password);
-          console.log("passwords match: " + (results.content[0]._data.password === credentials.password));
+        if(results.content.length && results.content[0]._data.password === credentials.password) {
+          userInScope.logIn(credentials.username, credentials.password);
         }
         else {
-          console.log("There is NO user stored with username '" + credentials.username + "'");
+          alert("Either the username or password you entered was invalid.");
         }
       });
-      this.get('user').logIn(credentials.username, credentials.password);
     },
     signUp5(credentials) {
       this.get('user').signUp(credentials.username, credentials.password);
