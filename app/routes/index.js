@@ -30,9 +30,20 @@ export default Ember.Route.extend({
       });
     },
     signUp5(credentials) {
-      this.get('user').signUp(credentials.username, credentials.password);
+      var userInScope = this.get('user');
       var newUser = this.store.createRecord('user', credentials);
-      newUser.save();
+      this.store.query('user', {
+        orderBy: 'username',
+        equalTo: credentials.username
+      }).then(function(results){
+        if(results.content.length) {
+          alert("The username '" + credentials.username + "' is not available.");
+        }
+        else {
+          newUser.save();
+          userInScope.signUp(credentials.username, credentials.password);
+        }
+      });
     },
     logOut3() {
       this.get('user').logOut();

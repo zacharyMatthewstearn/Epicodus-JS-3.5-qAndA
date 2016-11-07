@@ -11,7 +11,7 @@ export default Ember.Service.extend({
       password: _password
     });
   },
-  logIn(_username, _password) {
+  logIn(_username, _password) { // I know, these two are redundant...
     this.set('currentUser', {
       username: _username,
       password: _password
